@@ -1491,6 +1491,18 @@
                   <param index="7">User defined</param>
               </entry>
               <!-- END of user range (31000 to 31999) -->
+              <!-- START OF MUAS OBC DEFINED RANGE -->
+              <entry value="31015" name="MAV_CMD_OBC_DO_REMOTE_LAND">
+                  <description>Direct the aircraft to perform the outback challenge remote landing procedure at specified coordinates</description>
+                  <param index="1">Not used</param>
+                  <param index="2">Not used</param>
+                  <param index="3">Not used</param>
+                  <param index="4">Not used</param>
+                  <param index="5">Latitude</param>
+                  <param index="6">Longitude</param>
+                  <param index="7">Not used</param>
+              </entry>
+              <!-- END OF MUAS OBC DEFINED RANGE -->
           </enum>
           <enum name="MAV_DATA_STREAM">
                <description>THIS INTERFACE IS DEPRECATED AS OF JULY 2015. Please use MESSAGE_INTERVAL instead. A data stream is not a fixed set of messages, but rather a
