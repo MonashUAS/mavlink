@@ -1502,6 +1502,36 @@
                   <param index="6">Longitude</param>
                   <param index="7">Not used</param>
               </entry>
+              <entry value="31016" name="MAV_CMD_OBC_SOFT_GEO_TOGGLE">
+                  <description>Enable or disable the soft geofence functionality of the companion computer</description>
+                  <param index="1">Enable:1, Disable:0, Request Current Status:42</param>
+                  <param index="2">Not used</param>
+                  <param index="3">Not used</param>
+                  <param index="4">Not used</param>
+                  <param index="5">Not used</param>
+                  <param index="6">Not used</param>
+                  <param index="7">Not used</param>
+              </entry>
+              <entry value="31017" name="MAV_CMD_OBC_IMAGING_CONTROL">
+                  <description>Control the settings and imaging rate of the onboard imaging software</description>
+                  <param index="1">Enable:1, Disable:0, Request Current Status:42</param>
+                  <param index="2">Imaging interval (ms)</param>
+                  <param index="3">Reserved</param>
+                  <param index="4">Reserved</param>
+                  <param index="5">Reserved</param>
+                  <param index="6">Reserved</param>
+                  <param index="7">Reserved</param>
+              </entry>
+              <entry value="31018" name="MAV_CMD_OBC_KILL_COMPANION">
+                  <description>This message will cause the companion computer to release control of the pixhawk</description>
+                  <param index="1">Kill:66, Request Current Status:42</param>
+                  <param index="2">Reserved</param>
+                  <param index="3">Reserved</param>
+                  <param index="4">Reserved</param>
+                  <param index="5">Reserved</param>
+                  <param index="6">Reserved</param>
+                  <param index="7">Reserved</param>
+              </entry>
               <!-- END OF MUAS OBC DEFINED RANGE -->
           </enum>
           <enum name="MAV_DATA_STREAM">
