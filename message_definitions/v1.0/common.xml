@@ -1532,6 +1532,26 @@
                   <param index="6">Reserved</param>
                   <param index="7">Reserved</param>
               </entry>
+              <entry value="31019" name="MAV_CMD_OBC_CMD_ACK">
+                  <description>Ack for other OBC messages</description>
+                  <param index="1">Enum of message acked</param>
+                  <param index="2">Boolean success of above command</param>
+                  <param index="3">Reserved</param>
+                  <param index="4">Reserved</param>
+                  <param index="5">Reserved</param>
+                  <param index="6">Reserved</param>
+                  <param index="7">Reserved</param>
+              </entry>
+              <entry value="31020" name="MAV_CMD_OBC_LANDING_STATUS">
+                  <description>Report on the status of landing</description>
+                  <param index="1">Stage of landing: Phases TBA</param>
+                  <param index="2">Reserved</param>
+                  <param index="3">Reserved</param>
+                  <param index="4">Reserved</param>
+                  <param index="5">Reserved</param>
+                  <param index="6">Reserved</param>
+                  <param index="7">Reserved</param>
+              </entry>
               <!-- END OF MUAS OBC DEFINED RANGE -->
           </enum>
           <enum name="MAV_DATA_STREAM">
