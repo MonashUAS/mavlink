@@ -3509,13 +3509,6 @@
           </message>
 
           <!--MUAS Defined return message -->
-          <message id="255" name="MUAS_OBC_INFO">
-              <description>Send a message back to the ground control station. Will be treated specially by cmavnode</description>
-              <field type="uint8_t" name="target_system">System ID (0 for broadcast)</field>
-              <field type="uint8_t" name="target_component">Component ID (0 for broadcast)</field>
-              <field type="uint8_t" name="message_code">Message sent back to the groundstation</field>
-          </message>
-
           <message id="256" name="SETUP_SIGNING">
                <description>Setup a MAVLink2 signing key. If called with secret_key of all zero and zero initial_timestamp will disable signing</description>
                <field type="uint8_t" name="target_system">system id of the target</field>
