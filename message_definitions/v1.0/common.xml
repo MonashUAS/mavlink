@@ -1495,12 +1495,12 @@
               <entry value="31015" name="MAV_CMD_OBC_DO_REMOTE_LAND">
                   <description>Direct the aircraft to perform the outback challenge remote landing procedure at specified coordinates</description>
                   <param index="1">Not used</param>
-                  <param index="2">Not used</param>
-                  <param index="3">Not used</param>
-                  <param index="4">Not used</param>
-                  <param index="5">Latitude</param>
-                  <param index="6">Longitude</param>
-                  <param index="7">Not used</param>
+                  <param index="2">Direction (bool 0:cw 1:ccw)</param>
+                  <param index="3">Latitude (Joe)</param>
+                  <param index="4">Longitude (Joe)</param>
+                  <param index="5">Latitude (Land)</param>
+                  <param index="6">Longitude (Land)</param>
+                  <param index="7">Altitude (Land)</param>
               </entry>
               <entry value="31016" name="MAV_CMD_OBC_SOFT_GEO_TOGGLE">
                   <description>Enable or disable the soft geofence functionality of the companion computer</description>
@@ -1533,19 +1533,29 @@
                   <param index="7">Reserved</param>
               </entry>
               <entry value="31019" name="MAV_CMD_OBC_CMD_ACK">
-                  <description>Ack for other OBC messages</description>
+                  <description>Ack for other OBC messages, also used to pass simple data back</description>
                   <param index="1">Enum of message acked</param>
                   <param index="2">Boolean success of above command</param>
+                  <param index="3">Reserved for requested data</param>
+                  <param index="4">Reserved for requested data</param>
+                  <param index="5">Reserved for requested data</param>
+                  <param index="6">Reserved for requested data</param>
+                  <param index="7">Reserved for requested data</param>
+              </entry>
+              <entry value="31020" name="MAV_CMD_OBC_LANDING_STATUS">
+                  <description>Report on the status of landing</description>
+                  <param index="1">Stage of landing</param>
+                  <param index="2">Reserved</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
                   <param index="5">Reserved</param>
                   <param index="6">Reserved</param>
                   <param index="7">Reserved</param>
               </entry>
-              <entry value="31020" name="MAV_CMD_OBC_LANDING_STATUS">
-                  <description>Report on the status of landing</description>
-                  <param index="1">Stage of landing: Phases TBA</param>
-                  <param index="2">Reserved</param>
+              <entry value="31021" name="MAV_CMD_OBC_MODULE_CONTROL">
+                  <description>For controlling the different modules running as part of the companion computer software</description>
+                  <param index="1">Action: 0=stop module 1=start module 42=request module status</param>
+                  <param index="2">Module number to operate on</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
                   <param index="5">Reserved</param>
