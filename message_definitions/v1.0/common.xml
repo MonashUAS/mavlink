@@ -1494,7 +1494,7 @@
               <!-- START OF MUAS OBC DEFINED RANGE -->
               <entry value="31015" name="MAV_CMD_OBC_DO_REMOTE_LAND">
                   <description>Direct the aircraft to perform the outback challenge remote landing procedure at specified coordinates</description>
-                  <param index="1">Not used</param>
+                  <param index="1">Landing Pattern (0: Spiral, 1: Single long loop, 2: Straight Descent)</param>
                   <param index="2">Direction (bool 0:cw 1:ccw)</param>
                   <param index="3">Latitude (Joe)</param>
                   <param index="4">Longitude (Joe)</param>
