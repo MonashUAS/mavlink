@@ -1494,8 +1494,8 @@
               <!-- START OF MUAS OBC DEFINED RANGE -->
               <entry value="31015" name="MAV_CMD_OBC_DO_REMOTE_LAND">
                   <description>Direct the aircraft to perform the outback challenge remote landing procedure at specified coordinates</description>
-                  <param index="1">Landing Pattern (1: Spiral, 2: Dual long loop, 3: Straight Descent, 4: Hook turn. A negative value is to do a reversed takeoff aiming towards Joe rather than away from him. e.g. )</param>
-                  <param index="2">Direction (bool 0:cw 1:ccw)</param>
+                  <param index="1">Direction (bool 0:cw 1:ccw)</param>
+                  <param index="2">Landing Pattern (1: Spiral, 2: Dual long loop, 3: Straight Descent, 4: Hook turn. A negative value is to do a reversed takeoff aiming towards Joe rather than away from him. e.g. )</param>
                   <param index="3">Latitude (Joe)</param>
                   <param index="4">Longitude (Joe)</param>
                   <param index="5">Latitude (Land)</param>
