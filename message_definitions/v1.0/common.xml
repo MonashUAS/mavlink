@@ -1544,7 +1544,8 @@
               </entry>
               <entry value="31020" name="MAV_CMD_OBC_LANDING_STATUS">
                   <description>Report on the status of landing</description>
-                  <param index="1">Stage of landing:
+                  <param index="1">0: Request landing status, 1: Responding to request of landing status.</param>
+                  <param index="2">Stage of landing:
                     0: Not Landing/Takeoff
                     1: Generating Landing Waypoints
                     2: In landing mission and descent phase
@@ -1553,7 +1554,6 @@
                     5: Takeoff Preparation - safety switch off, auto mode enabled
                     6: Waiting for takeoff
                     7: Is taking off</param>
-                  <param index="2">Reserved</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
                   <param index="5">Reserved</param>
