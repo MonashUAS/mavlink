@@ -1544,7 +1544,15 @@
               </entry>
               <entry value="31020" name="MAV_CMD_OBC_LANDING_STATUS">
                   <description>Report on the status of landing</description>
-                  <param index="1">Stage of landing</param>
+                  <param index="1">Stage of landing:
+                    0: Not Landing/Takeoff
+                    1: Generating Landing Waypoints
+                    2: In landing mission and descent phase
+                    3: Aircraft has landed
+                    4: Button Pressed, uploading takeoff mission
+                    5: Takeoff Preparation - safety switch off, auto mode enabled
+                    6: Waiting for takeoff
+                    7: Is taking off</param>
                   <param index="2">Reserved</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
@@ -1562,6 +1570,38 @@
                   <param index="6">Reserved</param>
                   <param index="7">Reserved</param>
               </entry>
+              <entry value="31022" name="MAV_CMD_OBC_MISSION_ID">
+                  <description>Gets the current mission ID from dronekit.</description>
+                  <param index="1">0: Request Mission ID, 1: Setting Mission ID, 2: Responding to request of Mission ID.</param>
+                  <param index="2">The current Mission ID.</param>
+                  <param index="3">Reserved</param>
+                  <param index="4">Reserved</param>
+                  <param index="5">Reserved</param>
+                  <param index="6">Reserved</param>
+                  <param index="7">Reserved</param>
+              </entry>
+              <entry value="31023" name="MAV_CMD_OBC_MISSION_START_MODE">
+                  <description>Gets, sets and sends the current start mode.</description>
+                  <param index="1">0: Request current start mode, 1: Sets current mission start mode, 2: Responding to request of mission start mode.</param>
+                  <param index="2">Mission start mode: 1: Start new missions with waypoint defined in mission config. 2: Start new missions with the closest waypoint.
+                    3: Doesn't upload a new mission on startup of dronekit.</param>
+                  <param index="3">Reserved</param>
+                  <param index="4">Reserved</param>
+                  <param index="5">Reserved</param>
+                  <param index="6">Reserved</param>
+                  <param index="7">Reserved</param>
+              </entry>
+              <entry value="31024" name="MAV_CMD_OBC_PUSH_BUTTON_STATUS">
+                  <description>Gets, sets and sends the push button status from dronekit.</description>
+                  <param index="1">0: Request push button status, 1: Sets the push butotn status, 2: Responding to request of push button status.</param>
+                  <param index="2">Reserved</param>
+                  <param index="3">Reserved</param>
+                  <param index="4">Reserved</param>
+                  <param index="5">Reserved</param>
+                  <param index="6">Reserved</param>
+                  <param index="7">Reserved</param>
+              </entry>
+
               <!-- END OF MUAS OBC DEFINED RANGE -->
           </enum>
           <enum name="MAV_DATA_STREAM">
