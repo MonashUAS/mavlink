@@ -1592,9 +1592,9 @@
                   <param index="7">Reserved</param>
               </entry>
               <entry value="31024" name="MAV_CMD_OBC_PUSH_BUTTON_STATUS">
-                  <description>Gets, sets and sends the push button status from dronekit.</description>
-                  <param index="1">0: Request push button status, 1: Sets the push butotn status, 2: Responding to request of push button status.</param>
-                  <param index="2">Reserved</param>
+                  <description>Gets the push button status from dronekit.</description>
+                  <param index="1">0: Request push button status, 1: Responding to request of push button status.</param>
+                  <param index="2">1: For button is pressed, 0: for button unpressed.</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
                   <param index="5">Reserved</param>
