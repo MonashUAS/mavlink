@@ -1525,7 +1525,7 @@
               <entry value="31018" name="MAV_CMD_OBC_KILL_COMPANION">
                   <description>This message will cause the companion computer to release control of the pixhawk</description>
                   <param index="1">Kill:66, Request Current Status:42</param>
-                  <param index="2">Reserved</param>
+                  <param index="2">1: Alive</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
                   <param index="5">Reserved</param>
@@ -1544,7 +1544,8 @@
               </entry>
               <entry value="31020" name="MAV_CMD_OBC_LANDING_STATUS">
                   <description>Report on the status of landing</description>
-                  <param index="1">Stage of landing:
+                  <param index="1">0: Request Landing Status 1: Responding to request of Landing Status</param>
+                  <param index="2">Stage of landing:
                     0: Not Landing/Takeoff
                     1: Generating Landing Waypoints
                     2: In landing mission and descent phase
@@ -1553,9 +1554,8 @@
                     5: Takeoff Preparation - safety switch off, auto mode enabled
                     6: Waiting for takeoff
                     7: Is taking off</param>
-                  <param index="2">Reserved</param>
-                  <param index="3">Reserved</param>
-                  <param index="4">Reserved</param>
+                  <param index="3">If param is 2 is 3, distance from Joe</param>
+                  <param index="4">If param is 2 is 3, distance from give landing point</param>
                   <param index="5">Reserved</param>
                   <param index="6">Reserved</param>
                   <param index="7">Reserved</param>
@@ -1593,8 +1593,18 @@
               </entry>
               <entry value="31024" name="MAV_CMD_OBC_PUSH_BUTTON_STATUS">
                   <description>Gets, sets and sends the push button status from dronekit.</description>
-                  <param index="1">0: Request push button status, 1: Sets the push butotn status, 2: Responding to request of push button status.</param>
-                  <param index="2">Reserved</param>
+                  <param index="1">0: Request push button status, 1: Sets the push button status, 2: Responding to request of push button status.</param>
+                  <param index="2">0: Push button not pressed, 1: Push butotn pressed </param>
+                  <param index="3">Reserved</param>
+                  <param index="4">Reserved</param>
+                  <param index="5">Reserved</param>
+                  <param index="6">Reserved</param>
+                  <param index="7">Reserved</param>
+              </entry>
+                  <entry value="31024" name="MAV_CMD_OBC_CHANGE_LANDING_TAKEOFF_ALT">
+                  <description>Set the current landing or takeoff start/end altitude.</description>
+                  <param index="1">0: Set landing start altitude, 1: Set takeoff end altitude, 2: Responding to changing of landing start altitude, 3: Responding to changing of takeoff end altitude.</param>
+                  <param index="2">Altitude (m)</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
                   <param index="5">Reserved</param>
