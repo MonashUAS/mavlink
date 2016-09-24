@@ -1601,7 +1601,7 @@
                   <param index="6">Reserved</param>
                   <param index="7">Reserved</param>
               </entry>
-              <entry value="31024" name="MAV_CMD_OBC_CHANGE_LANDING_TAKEOFF_ALT">
+              <entry value="31025" name="MAV_CMD_OBC_CHANGE_LANDING_TAKEOFF_ALT">
                   <description>Set the current landing or takeoff start/end altitude.</description>
                   <param index="1">0: Set landing start altitude, 1: Set takeoff end altitude, 2: Responding to changing of landing start altitude, 3: Responding to changing of takeoff end altitude.</param>
                   <param index="2">Altitude (m)</param>
