@@ -1562,7 +1562,7 @@
               </entry>
               <entry value="31021" name="MAV_CMD_OBC_MODULE_CONTROL">
                   <description>For controlling the different modules running as part of the companion computer software</description>
-                  <param index="1">Action: 0=stop module, 42=request module status, 2=pause, 3=resume, 4=complete</param>
+                  <param index="1">Action: 0=stop module, 42=request module status, 2=pause, 3=running, 4=complete</param>
                   <param index="2">Module number to operate on</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
