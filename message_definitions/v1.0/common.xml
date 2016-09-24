@@ -1505,7 +1505,7 @@
               <entry value="31016" name="MAV_CMD_OBC_SOFT_GEO_TOGGLE">
                   <description>Enable or disable the soft geofence functionality of the companion computer</description>
                   <param index="1">Enable:1, Disable:0, Request Current Status:42</param>
-                  <param index="2">Not used</param>
+                  <param index="2">1: If breached, 0 is not breached.</param>
                   <param index="3">Not used</param>
                   <param index="4">Not used</param>
                   <param index="5">Not used</param>
