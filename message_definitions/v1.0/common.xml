@@ -1505,7 +1505,7 @@
               <entry value="31016" name="MAV_CMD_OBC_SOFT_GEO_TOGGLE">
                   <description>Enable or disable the soft geofence functionality of the companion computer</description>
                   <param index="1">Enable:1, Disable:0, Request Current Status:42</param>
-                  <param index="2">Not used</param>
+                  <param index="2">1: If breached, 0 is not breached.</param>
                   <param index="3">Not used</param>
                   <param index="4">Not used</param>
                   <param index="5">Not used</param>
@@ -1525,7 +1525,7 @@
               <entry value="31018" name="MAV_CMD_OBC_KILL_COMPANION">
                   <description>This message will cause the companion computer to release control of the pixhawk</description>
                   <param index="1">Kill:66, Request Current Status:42</param>
-                  <param index="2">Reserved</param>
+                  <param index="2">1: Alive</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
                   <param index="5">Reserved</param>
@@ -1544,7 +1544,7 @@
               </entry>
               <entry value="31020" name="MAV_CMD_OBC_LANDING_STATUS">
                   <description>Report on the status of landing</description>
-                  <param index="1">0: Request landing status, 1: Responding to request of landing status.</param>
+                  <param index="1">0: Request Landing Status 1: Responding to request of Landing Status</param>
                   <param index="2">Stage of landing:
                     0: Not Landing/Takeoff
                     1: Generating Landing Waypoints
@@ -1556,15 +1556,15 @@
                     7: Is taking off
                     8: Waiting to regain comms
                     9: Comms timeout, Safety switch on, killing dronekit</param>
-                  <param index="3">Reserved</param>
-                  <param index="4">Reserved</param>
-                  <param index="5">Reserved</param>
-                  <param index="6">Reserved</param>
-                  <param index="7">Reserved</param>
+                  <param index="3">If param is 2 is 3, distance from Joe</param>
+                  <param index="4">If param is 2 is 3, distance from give landing point</param>
+                  <param index="5">Landing Latitude</param>
+                  <param index="6">Landing Longitude</param>
+                  <param index="7">Landing Altitude</param>
               </entry>
               <entry value="31021" name="MAV_CMD_OBC_MODULE_CONTROL">
                   <description>For controlling the different modules running as part of the companion computer software</description>
-                  <param index="1">Action: 0=stop module, 1=kill and restart,42=request module status, 2=pause, 3=resume, 4=complete</param>
+                  <param index="1">Action: 0=stop module, 42=request module status, 2=pause, 3=running, 4=complete</param>
                   <param index="2">Module number to operate on</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
@@ -1594,9 +1594,19 @@
                   <param index="7">Reserved</param>
               </entry>
               <entry value="31024" name="MAV_CMD_OBC_PUSH_BUTTON_STATUS">
-                  <description>Gets the push button status from dronekit.</description>
-                  <param index="1">0: Request push button status, 1: Responding to request of push button status.</param>
-                  <param index="2">1: For button is pressed, 0: for button unpressed.</param>
+                  <description>Gets, sets and sends the push button status from dronekit.</description>
+                  <param index="1">0: Request push button status, 1: Sets the push button status, 2: Responding to request of push button status.</param>
+                  <param index="2">0: Push button not pressed, 1: Push button pressed </param>
+                  <param index="3">Reserved</param>
+                  <param index="4">Reserved</param>
+                  <param index="5">Reserved</param>
+                  <param index="6">Reserved</param>
+                  <param index="7">Reserved</param>
+              </entry>
+              <entry value="31025" name="MAV_CMD_OBC_CHANGE_LANDING_TAKEOFF_ALT">
+                  <description>Set the current landing or takeoff start/end altitude.</description>
+                  <param index="1">0: Set landing start altitude, 1: Set takeoff end altitude, 2: Responding to changing of landing start altitude, 3: Responding to changing of takeoff end altitude.</param>
+                  <param index="2">Altitude (m)</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
                   <param index="5">Reserved</param>
