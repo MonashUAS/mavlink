@@ -1553,7 +1553,9 @@
                     4: Button Pressed, uploading takeoff mission
                     5: Takeoff Preparation - safety switch off, auto mode enabled
                     6: Waiting for takeoff
-                    7: Is taking off</param>
+                    7: Is taking off
+                    8: Waiting to regain comms
+                    9: Comms timeout, Safety switch on, killing dronekit</param>
                   <param index="3">Reserved</param>
                   <param index="4">Reserved</param>
                   <param index="5">Reserved</param>
