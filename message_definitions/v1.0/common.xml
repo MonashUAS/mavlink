@@ -1623,7 +1623,7 @@
                   <param index="6">Reserved</param>
                   <param index="7">Reserved</param>
               </entry>
-              <entry value="31026" name="MAV_CMD_OBC_TAKEOFF_COUNTDOWN">
+              <entry value="31027" name="MAV_CMD_OBC_TAKEOFF_COUNTDOWN">
                   <description>Dronekit sends a message to the gui with the time remaining until takeoff.</description>
                   <param index="1">Time until takeoff (s).</param>
                   <param index="2">Reserved</param>
